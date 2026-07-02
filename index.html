@@ -1,190 +1,206 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nathan 14 Calculator</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      text-align: center;
-    }
-
-    .container {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .logo {
-      width: 120px;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .section {
-      margin-top: 70px;
-    }
-
-    .buttons {
-      margin-top: 50px;
-    }
-
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 16px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .apple {
-      background: white;
-      color: black;
-    }
-
-    .google {
-      background: #22c55e;
-      color: white;
-    }
-
-    .microsoft {
-      background: #2563eb;
-      color: white;
-    }
-
-    .button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    .footer a {
-      color: #94a3b8;
-      text-decoration: none;
-    }
-
-    ul {
-      text-align: left;
-      max-width: 700px;
-      margin: 20px auto;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan 14 Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color:white;
+  text-align:center;
+}
+.container {
+  padding:80px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+.logo {
+  width:120px;
+  margin-bottom:30px;
+}
+h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+p {
+  font-size:20px;
+  color:#cbd5e1;
+  max-width:700px;
+  margin:auto;
+}
+.section {
+  margin-top:70px;
+}
+.buttons {
+  margin-top:50px;
+}
+.button {
+  display:inline-block;
+  margin:10px;
+  padding:16px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+.apple {
+  background:white;
+  color:black;
+}
+.google {
+  background:#22c55e;
+  color:white;
+}
+.microsoft {
+  background:#2563eb;
+  color:white;
+}
+.button:hover {
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+/* Added: podcast-button was referenced but never defined */
+.podcast-button {
+  display:inline-block;
+  margin:10px;
+  padding:14px 26px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  background:#334155;
+  color:white;
+  transition:0.3s;
+}
+.podcast-button:hover {
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  background:#475569;
+}
+.footer {
+  margin-top:80px;
+  font-size:14px;
+  color:#94a3b8;
+}
+.footer a {
+  color:#94a3b8;
+  text-decoration:none;
+}
+ul {
+  text-align:left;
+  max-width:700px;
+  margin:20px auto;
+  color:#cbd5e1;
+  font-size:18px;
+}
+</style>
 </head>
-
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <img src="logo.png" class="logo" alt="Nathan 14 Logo">
+<img src="logo.png" class="logo" alt="Nathan 14 Logo">
 
-    <h1>Nathan 14 Calculator</h1>
+<h1>Nathan 14 Calculator</h1>
 
-    <p>
-      The most advanced assistive calculator designed to empower students with clarity,
-      speed and accessibility. Developed by Bullseye Assistive Technology Limited.
-    </p>
+<p>
+The most advanced assistive calculator designed to empower students with clarity,
+speed and accessibility. Developed by Bullseye Assistive Technology Limited.
+</p>
 
-    <div class="buttons">
-      <a href="#" class="button apple">Download on the App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.nathan.calculatorapp&hl=en_IE" class="button google">
-        Get it on Google Play
-      </a>
-      <a href="https://apps.microsoft.com/detail/9nw12qqd7ht7?hl=en-GB&gl=ZA" class="button microsoft">
-        Download on Microsoft Store
-      </a>
-    </div>
+<div class="buttons">
+  <a href="https://apps.apple.com/us/app/examcalc-nathan-14-calculator/id6770449545" class="button apple">Download on the App Store</a>
+  <a href="https://play.google.com/store/apps/details?id=com.nathan.calculatorapp&hl=en_IE" class="button google">Get it on Google Play</a>
+  <a href="https://apps.microsoft.com/detail/9nw12qqd7ht7?hl=en-GB&gl=ZA" class="button microsoft">Download on Microsoft Store</a>
+</div>
 
-    <div class="section">
+<div class="section">
+  <p>
+  The Nathan 14 Scientific Calculator is a powerful and reliable calculator app designed specifically for students preparing for Leaving Certificate Higher Level, GCSE Maths, and other secondary school or college-level exams.
+  Perfect for homework, practice, and final exams, this app brings the full capabilities of a physical scientific calculator straight to your device seamlessly.
+  </p>
 
-      <p>
-        The Nathan 14 Scientific Calculator is a powerful and reliable calculator app designed specifically for students preparing for Leaving Certificate Higher Level, GCSE Maths, and other secondary school or college-level exams. Perfect for homework, practice, and final exams, this app brings the full capabilities of a physical scientific calculator straight to your device seamlessly.
-      </p>
+  <ul>
+    <li>Comprehensive scientific calculator functions: standard deviation, linear regression, trigonometry, logarithms, exponentials, powers, roots, fractions, percentages, and more.</li>
+    <li>Supports all functions required for LC HL Maths and GCSE Mathematics.</li>
+    <li>Easy-to-use interface for quick calculations during study sessions or exams.</li>
+  </ul>
 
-      <ul>
-        <li>Comprehensive scientific calculator functions: standard deviation, linear regression, trigonometry, logarithms, exponentials, powers, roots, fractions, percentages, and more.</li>
-        <li>Supports all functions required for LC HL Maths and GCSE Mathematics.</li>
-        <li>Easy-to-use interface for quick calculations during study sessions or exams.</li>
-      </ul>
+  <h2>Unique Exam-Ready Features</h2>
+  <ul>
+    <li>Integrated Formula Tables: Access commonly used Maths, Physics and Chemistry formulas without leaving the app.</li>
+    <li>Built-in Logarithm Tables: Quickly reference log values for manual calculations or revision.</li>
+  </ul>
 
-      <h2>Unique Exam-Ready Features</h2>
+  <p>
+  Perfect for students who want efficient exam prep and fast results.
+  </p>
 
-      <ul>
-        <li>Integrated Formula Tables: Access commonly used Maths, Physics and Chemistry formulas without leaving the app.</li>
-        <li>Built-in Logarithm Tables: Quickly reference log values for manual calculations or revision.</li>
-      </ul>
+  <h2>Why Students Love Nathan 14</h2>
+  <ul>
+    <li>Ideal for school, homework, or exams.</li>
+    <li>Lightweight, fast, and intuitive interface.</li>
+    <li>Reduces dependency on physical calculators while retaining exam compliance.</li>
+    <li>Trusted by students for accuracy and reliability in exams and assignments.</li>
+  </ul>
+</div>
 
-      <p>
-        Perfect for students who want efficient exam prep and fast results.
-      </p>
+<div class="section">
+  <h2>Nathan 14 Assistive Technology Device</h2>
 
-      <h2>Why Students Love Nathan 14</h2>
+  <p>
+  The Nathan 14 Assistive Technology Device is designed to make advanced mathematics accessible for students with visual impairments and other accessibility needs.
+  It combines powerful software with inclusive design to ensure students can perform at their full potential in exams and classroom environments.
+  </p>
 
-      <ul>
-        <li>Ideal for school, homework, or exams.</li>
-        <li>Lightweight, fast, and intuitive interface.</li>
-        <li>Reduces dependency on physical calculators while retaining exam compliance.</li>
-        <li>Trusted by students for accuracy and reliability in exams and assignments.</li>
-      </ul>
+  <ul>
+    <li>Improves accessibility and independence for students</li>
+    <li>Designed with exam compliance in mind</li>
+    <li>Supports efficient learning and revision</li>
+    <li>Helps bridge the gap between ability and opportunity</li>
+  </ul>
 
-    </div>
+  <h2>🎧 Featured Podcasts</h2>
 
-    <div class="section">
+  <div class="buttons">
 
-      <h2>Nathan 14 Assistive Technology Device</h2>
+    <a href="https://youtu.be/ejMuiBiV4S0?t=1968"
+       target="_blank"
+       class="podcast-button">
+       ▶ VI Labs – Talking Technology Episode 49
+    </a>
 
-      <p>
-        The Nathan 14 Assistive Technology Device is designed to make advanced mathematics accessible for students with visual impairments and other accessibility needs. It combines powerful software with inclusive design to ensure students can perform at their full potential in exams and classroom environments.
-      </p>
+    <a href="https://open.spotify.com/episode/195O7bKwnhpWcfIJYmopvD?si=a407f7208dad4d88"
+       target="_blank"
+       class="podcast-button">
+       🎧 Sight and Sound Technology – Episode 82
+    </a>
 
-      <ul>
-        <li>Improves accessibility and independence for students</li>
-        <li>Designed with exam compliance in mind</li>
-        <li>Supports efficient learning and revision</li>
-        <li>Helps bridge the gap between ability and opportunity</li>
-      </ul>
+    <a href="https://www.youtube.com/watch?v=o6-KYUYF0Cc"
+       target="_blank"
+       class="podcast-button">
+       ▶ VI Labs – Talking Technology Episode 110
+    </a>
 
-      <p>
-        🎧 Featured on podcast:<br><br>
-
-        <a href="https://www.youtube.com/watch?v=o6-KYUYF0Cc" target="_blank">VI labs Talking Technology episode 110 on YouTube</a><br>
-        <a href="https://open.spotify.com/episode/195O7bKwnhpWcfIJYmopvD?si=a407f7208dad4d88" target="_blank">Sight and Sound Technology Episode 82 on Spotify</a>
-      </p>
-
-    </div>
-
-    <div class="footer">
-      <p>© 2026 Bullseye Assistive Technology Limited</p>
-      <p><a href="privacy.html">Privacy Policy</a> | info@bullseyeat.com</p>
-    </div>
+    <a href="https://open.spotify.com/episode/6ax5yzk8O0xOIjbTVBZJMN?si=abc3f39d48d44961"
+       target="_blank"
+       class="podcast-button">
+       🎧 Out of Sight with Joe G
+    </a>
 
   </div>
+
+</div> <!-- End of Nathan 14 Assistive Technology Device section -->
+
+<div class="footer">
+  <p>© 2026 Bullseye Assistive Technology Limited</p>
+  <p><a href="privacy.html">Privacy Policy</a> | info@bullseyeat.com</p>
+</div>
+
+</div>
 
 </body>
 </html>
