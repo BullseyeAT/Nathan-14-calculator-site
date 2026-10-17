@@ -1,315 +1,404 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bullseye Assistive Technology</title>
+<meta name="description" content="Bullseye Assistive Technology Limited develops accessible technology, including the Nathan 14 assistive technology device and scientific calculator.">
+<title>Bullseye Assistive Technology Limited</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin:0;
-  font-family:'Inter', sans-serif;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
-  color:white;
-  text-align:center;
+  color: white;
+  text-align: center;
 }
 
 .container {
-  padding:80px 20px;
-  max-width:1000px;
-  margin:auto;
+  padding: 50px 20px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.company-logo {
+  width: 200px;
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto 45px;
 }
 
 .logo {
-  width:120px;
-  margin-bottom:30px;
+  width: 120px;
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 25px;
 }
 
 h1 {
-  font-size:48px;
-  margin-bottom:20px;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(23px, 4vw, 30px);
+  margin-bottom: 25px;
 }
 
 p {
-  font-size:20px;
-  color:#cbd5e1;
-  max-width:700px;
-  margin:auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  max-width: 760px;
+  margin: 0 auto 18px;
 }
 
 .section {
-  margin-top:70px;
+  margin-top: 70px;
+}
+
+.notice {
+  margin: 35px auto 0;
+  padding: 20px;
+  max-width: 760px;
+  border: 1px solid #475569;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+}
+
+.notice p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.notice strong {
+  color: white;
 }
 
 .buttons {
-  margin-top:50px;
+  margin-top: 35px;
 }
 
-.button {
-  display:inline-block;
-  margin:10px;
-  padding:16px 30px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
+.button,
+.podcast-button {
+  display: inline-block;
+  margin: 8px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover,
+.podcast-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 .apple {
-  background:white;
-  color:black;
+  background: white;
+  color: #111827;
 }
 
 .google {
-  background:#22c55e;
-  color:white;
+  background: #22c55e;
+  color: white;
 }
 
 .microsoft {
-  background:#2563eb;
-  color:white;
-}
-
-.button:hover {
-  transform:translateY(-4px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  background: #2563eb;
+  color: white;
 }
 
 .podcast-button {
-  display:inline-block;
-  margin:10px;
-  padding:14px 26px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  background:#334155;
-  color:white;
-  transition:0.3s;
-}
-
-.podcast-button:hover {
-  transform:translateY(-4px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-  background:#475569;
-}
-
-.onshape-banner {
-  margin-top:80px;
-  width:100vw;
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;
-  margin-right:-50vw;
-}
-
-.onshape-banner img {
-  width:90%;
-  max-width:1600px;
-  height:auto;
-  display:block;
-  margin:80px auto 0;
-}
-
-.footer {
-  margin-top:60px;
-  font-size:14px;
-  color:#94a3b8;
-}
-
-.footer a {
-  color:#94a3b8;
-  text-decoration:none;
+  background: #334155;
+  color: white;
 }
 
 ul {
-  text-align:left;
-  max-width:700px;
-  margin:20px auto;
-  color:#cbd5e1;
-  font-size:18px;
+  text-align: left;
+  max-width: 760px;
+  margin: 20px auto;
+  padding-left: 28px;
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.onshape-banner {
+  margin-top: 75px;
+  width: 100%;
+}
+
+.onshape-banner img {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.footer {
+  margin-top: 60px;
+  padding: 25px 10px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer a {
+  color: #cbd5e1;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 35px 18px 20px;
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .button,
+  .podcast-button {
+    display: block;
+    margin: 12px auto;
+    max-width: 340px;
+  }
+
+  ul {
+    font-size: 16px;
+  }
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<!-- ===================================================== -->
-<!-- NATHAN 14 ASSISTIVE TECHNOLOGY DEVICE -->
-<!-- ===================================================== -->
+<!-- BULLSEYEAT COMPANY LOGO -->
+<img
+  src="1789494892716.png"
+  class="company-logo"
+  alt="Bullseye Assistive Technology Limited logo"
+>
 
-<h1>Nathan 14 Assistive Technology Device</h1>
+<!-- COMPANY INTRODUCTION -->
+<h1>Bullseye Assistive Technology Limited</h1>
 
 <p>
-The Nathan 14 Assistive Technology Device is designed to make advanced mathematics
-accessible for students with visual impairments and other accessibility needs.
-It combines powerful software with inclusive hardware design to help students
-perform at their full potential in exams and classroom environments.
+We develop accessible technology designed to improve independence
+and accessibility for people with visual impairments and other
+accessibility needs.
 </p>
 
+<div class="notice">
+  <p>
+    <strong>Our website is currently under construction.</strong>
+  </p>
+  <p>
+    We are working to bring you more information about our company,
+    products and developments. Please check back soon for updates.
+  </p>
+</div>
+
+<!-- NATHAN 14 ASSISTIVE TECHNOLOGY DEVICE -->
 <div class="section">
 
-  <h2>Designed for Accessibility</h2>
+<h2>Nathan 14 Assistive Technology Device</h2>
 
-  <ul>
-    <li>Improves accessibility and independence for students</li>
-    <li>Designed with exam compliance in mind</li>
-    <li>Supports efficient learning and revision</li>
-    <li>Helps bridge the gap between ability and opportunity</li>
-  </ul>
+<p>
+The Nathan 14 Assistive Technology Device is designed to make
+advanced mathematics and classroom learning more accessible for
+students with visual impairments. It combines specialised hardware
+and accessible software to support independence in educational
+and examination environments.
+</p>
+
+<h2>Designed for Accessibility</h2>
+
+<ul>
+  <li>Designed to support greater independence for students with visual impairments.</li>
+  <li>Developed with examination accessibility requirements in mind.</li>
+  <li>Combines accessible technology with practical classroom functionality.</li>
+  <li>Aims to help reduce barriers to learning and participation.</li>
+</ul>
 
 </div>
 
-
-<!-- ===================================================== -->
 <!-- NATHAN 14 CALCULATOR APP -->
-<!-- ===================================================== -->
-
 <div class="section">
 
-  <img src="logo.png" class="logo" alt="Nathan 14 Logo">
+<img
+  src="logo.png"
+  class="logo"
+  alt="Nathan 14 Calculator logo"
+>
 
-  <h1>Nathan 14 Calculator</h1>
+<h2>Nathan 14 Calculator</h2>
 
-  <p>
-  The most advanced assistive calculator designed to empower students with clarity,
-  speed and accessibility. Developed by Bullseye Assistive Technology Limited.
-  </p>
+<p>
+An accessible scientific calculator developed by Bullseye Assistive
+Technology Limited to help students perform calculations with
+clarity, speed and confidence.
+</p>
 
-  <div class="buttons">
+<div class="buttons">
 
-    <a href="https://apps.apple.com/us/app/examcalc-nathan-14-calculator/id6770449545"
-       class="button apple">
-       Download on the App Store
-    </a>
+<a
+  href="https://apps.apple.com/us/app/examcalc-nathan-14-calculator/id6770449545"
+  class="button apple"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Download on the App Store
+</a>
 
-    <a href="https://play.google.com/store/apps/details?id=com.nathan.calculatorapp&hl=en_IE"
-       class="button google">
-       Get it on Google Play
-    </a>
+<a
+  href="https://play.google.com/store/apps/details?id=com.nathan.calculatorapp&amp;hl=en_IE"
+  class="button google"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Get it on Google Play
+</a>
 
-    <a href="https://apps.microsoft.com/detail/9nw12qqd7ht7?hl=en-GB&gl=ZA"
-       class="button microsoft">
-       Download on Microsoft Store
-    </a>
-
-  </div>
+<a
+  href="https://apps.microsoft.com/detail/9nw12qqd7ht7?hl=en-GB&amp;gl=ZA"
+  class="button microsoft"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Download on Microsoft Store
+</a>
 
 </div>
 
+</div>
 
+<!-- CALCULATOR FEATURES -->
 <div class="section">
 
-  <p>
-  The Nathan 14 Scientific Calculator is a powerful and reliable calculator app
-  designed specifically for students preparing for Leaving Certificate Higher Level,
-  GCSE Maths, and other secondary school or college-level exams.
-  Perfect for homework, practice, and final exams, this app brings the full
-  capabilities of a physical scientific calculator straight to your device.
-  </p>
+<h2>Scientific Calculator Features</h2>
 
-  <ul>
-    <li>Comprehensive scientific calculator functions: standard deviation, linear regression, trigonometry, logarithms, exponentials, powers, roots, fractions, percentages, and more.</li>
-    <li>Supports all functions required for LC HL Maths and GCSE Mathematics.</li>
-    <li>Easy-to-use interface for quick calculations during study sessions or exams.</li>
-  </ul>
+<p>
+The Nathan 14 Scientific Calculator supports students preparing for
+Leaving Certificate Higher Level Mathematics, GCSE Mathematics and
+other secondary-school or college-level mathematics examinations.
+It brings scientific calculator functions to a convenient digital
+interface for study, practice and eligible examinations.
+</p>
 
-  <h2>Unique Exam-Ready Features</h2>
+<ul>
+  <li>Scientific functions including trigonometry, logarithms, exponentials, powers, roots, fractions and percentages.</li>
+  <li>Statistical tools including standard deviation and linear regression.</li>
+  <li>Integrated formula tables for mathematics, physics and chemistry.</li>
+  <li>Built-in logarithm tables for reference and revision.</li>
+  <li>An accessible interface designed to support efficient calculations.</li>
+</ul>
 
-  <ul>
-    <li>Integrated Formula Tables: Access commonly used Maths, Physics and Chemistry formulas without leaving the app.</li>
-    <li>Built-in Logarithm Tables: Quickly reference log values for manual calculations or revision.</li>
-  </ul>
+<h2>Supporting Students</h2>
 
-  <p>
-  Perfect for students who want efficient exam preparation and fast results.
-  </p>
-
-  <h2>Why Students Love Nathan 14</h2>
-
-  <ul>
-    <li>Ideal for school, homework, or exams.</li>
-    <li>Lightweight, fast, and intuitive interface.</li>
-    <li>Reduces dependency on physical calculators while retaining exam compliance.</li>
-    <li>Trusted by students for accuracy and reliability in exams and assignments.</li>
-  </ul>
+<p>
+Our aim is to develop technology that helps students access
+educational tools more independently. Examination use is subject
+to the applicable examination authority's rules and approval.
+</p>
 
 </div>
 
-
-<!-- ===================================================== -->
 <!-- FEATURED PODCASTS -->
-<!-- ===================================================== -->
-
 <div class="section">
 
-  <h2>🎧 Featured Podcasts</h2>
+<h2>🎧 Featured Podcasts</h2>
 
-  <div class="buttons">
+<p>
+Hear more about assistive technology and the work behind Nathan 14
+through these podcast appearances.
+</p>
 
-    <a href="https://youtu.be/ejMuiBiV4S0?t=1968"
-       target="_blank"
-       class="podcast-button">
-       ▶ VI Labs – Talking Technology Episode 49
-    </a>
+<div class="buttons">
 
-    <a href="https://open.spotify.com/episode/195O7bKwnhpWcfIJYmopvD?si=a407f7208dad4d88"
-       target="_blank"
-       class="podcast-button">
-       🎧 Sight and Sound Technology – Episode 82
-    </a>
+<a
+  href="https://youtu.be/ejMuiBiV4S0?t=1968"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="podcast-button"
+>
+  ▶ VI Labs – Talking Technology Episode 49
+</a>
 
-    <a href="https://www.youtube.com/watch?v=o6-KYUYF0Cc"
-       target="_blank"
-       class="podcast-button">
-       ▶ VI Labs – Talking Technology Episode 110
-    </a>
+<a
+  href="https://open.spotify.com/episode/195O7bKwnhpWcfIJYmopvD?si=a407f7208dad4d88"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="podcast-button"
+>
+  🎧 Sight and Sound Technology – Episode 82
+</a>
 
-    <a href="https://open.spotify.com/episode/6ax5yzk8O0xOIjbTVBZJMN?si=abc3f39d48d44961"
-       target="_blank"
-       class="podcast-button">
-       🎧 Out of Sight with Joe G
-    </a>
+<a
+  href="https://www.youtube.com/watch?v=o6-KYUYF0Cc"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="podcast-button"
+>
+  ▶ VI Labs – Talking Technology Episode 110
+</a>
 
-  </div>
+<a
+  href="https://open.spotify.com/episode/6ax5yzk8O0xOIjbTVBZJMN?si=abc3f39d48d44961"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="podcast-button"
+>
+  🎧 Out of Sight with Joe G
+</a>
 
 </div>
+</div>
 
-
-<!-- ===================================================== -->
-<!-- ONSHAPE -->
-<!-- ===================================================== -->
-
+<!-- ONSHAPE FOR STARTUPS -->
 <div class="onshape-banner">
 
-  <img
-    src="075cdeee10154ec4a43fc438e9a6436a_Onshape-Startup-Program-Badge-Dark.png"
-    alt="Onshape for Startups">
+<img
+  src="075cdeee10154ec4a43fc438e9a6436a_Onshape-Startup-Program-Badge-Dark.png"
+  alt="Onshape for Startups"
+  loading="lazy"
+>
 
 </div>
 
-
-<!-- ===================================================== -->
 <!-- FOOTER -->
-<!-- ===================================================== -->
+<footer class="footer">
 
-<div class="footer">
+<p>© 2026 Bullseye Assistive Technology Limited. All rights reserved.</p>
 
-  <p>© 2026 Bullseye Assistive Technology Limited</p>
+<p>
+<a href="privacy.html">Privacy Policy</a>
+&nbsp;|&nbsp;
+<a href="mailto:info@bullseyeat.com">info@bullseyeat.com</a>
+</p>
 
-  <p>
-    <a href="privacy.html">Privacy Policy</a>
-    |
-    info@bullseyeat.com
-  </p>
-
-</div>
+</footer>
 
 </div>
-
 </body>
 </html>
